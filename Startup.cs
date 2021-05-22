@@ -23,7 +23,7 @@ namespace goal_tracker
     public void ConfigureServices(IServiceCollection services)
     {
 
-
+      // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-5.0
       string mySqlConnectionStr = Configuration.GetConnectionString("DefaultConnection");
       services.AddDbContextPool<MySqlDBContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
 
